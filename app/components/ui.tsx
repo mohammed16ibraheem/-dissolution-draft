@@ -180,7 +180,7 @@ export function ContentSlide({
 
 /**
  * Concept visual sized to the asset's 16:9 ratio.
- * Height drives width so the diagram fills the frame (no letterboxed strip).
+ * object-contain keeps diagrams readable; height is capped so cards still fit in 100vh.
  */
 export function SlideVisual({
   src,
@@ -195,13 +195,13 @@ export function SlideVisual({
 }) {
   const heightClass =
     size === "lg"
-      ? "h-[clamp(8.5rem,26vh,13.5rem)]"
-      : "h-[clamp(8.25rem,24vh,12.75rem)]";
+      ? "h-[clamp(6.5rem,18vh,10.5rem)]"
+      : "h-[clamp(5.75rem,16vh,9.25rem)]";
 
   return (
     <motion.div
       variants={staggerItem}
-      className={`relative mx-auto aspect-[16/9] w-auto max-w-full shrink-0 overflow-hidden rounded-2xl border border-[var(--line)] bg-[rgba(8,14,26,0.55)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${heightClass} ${className}`}
+      className={`relative mx-auto aspect-[16/9] w-auto max-w-full shrink-0 overflow-hidden rounded-2xl border border-[var(--line)] bg-[rgba(8,14,26,0.72)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${heightClass} ${className}`}
     >
       <Image
         src={src}
