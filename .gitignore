@@ -28,6 +28,8 @@ _pptx.zip
 
 # temp / extract artifacts
 *.pptx
+_patch_*.py
+_*.py
 
 # debug
 npm-debug.log*
