@@ -140,8 +140,8 @@ export function SlideOpportunity() {
           src="/presentation/market-access-delivery.png"
           alt="Market access opens the door; MDBC delivers the solution"
         />
-        <div className="grid min-h-0 flex-1 items-stretch gap-3 xl:grid-cols-3 xl:gap-4">
-          <Card className="min-h-0">
+        <div className="grid min-h-0 flex-1 items-stretch gap-3 lg:grid-cols-3 lg:gap-4">
+          <Card className="min-h-0 overflow-hidden">
             <div className="flex items-center gap-3">
               <IconMark icon={Handshake} />
               <p className="text-xs tracking-[0.22em] text-[var(--accent)] uppercase">Osama brings</p>
@@ -416,7 +416,7 @@ export function SlideCommission() {
           src="/presentation/commission-formula.png"
           alt="Commissionable profit formula: revenue less direct costs, then 5% to partner"
         />
-        <div className="grid min-h-0 flex-1 items-stretch gap-3 xl:grid-cols-3 xl:gap-4">
+        <div className="grid min-h-0 flex-1 items-stretch gap-3 lg:grid-cols-3 lg:gap-4">
           <Card>
             <div className="flex items-center gap-3">
               <IconMark icon={Scale} />
@@ -829,7 +829,7 @@ export function SlideNinety() {
           src="/presentation/ninety-day-path.png"
           alt="90-day launch path: Build, Qualify, Convert"
         />
-        <div className="grid min-h-0 flex-1 items-stretch gap-3 xl:grid-cols-3 xl:gap-4">
+        <div className="grid min-h-0 flex-1 items-stretch gap-3 lg:grid-cols-3 lg:gap-4">
           {months.map((month, i) => (
             <Card key={month.t} tone={i === 2 ? "accent" : i === 1 ? "teal" : "default"}>
               <div className="flex items-start justify-between gap-3">
