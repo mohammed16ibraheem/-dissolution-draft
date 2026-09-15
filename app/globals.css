@@ -179,6 +179,32 @@ body {
   width: 100%;
 }
 
+/* Presentation concept visuals — keep 16:9 frame filled (no letterboxed strip). */
+.slide-visual {
+  position: relative;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  width: auto;
+  max-width: 100%;
+  flex-shrink: 0;
+  height: clamp(7.25rem, 19vh, 11rem);
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: rgba(8, 14, 26, 0.55);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.slide-visual--lg {
+  height: clamp(7.75rem, 21vh, 12rem);
+}
+
+.slide-visual img {
+  object-fit: contain;
+  object-position: center;
+  padding: 0.25rem;
+}
+
 .anim-next {
   animation: enterNext 0.62s cubic-bezier(0.16, 1, 0.3, 1) both;
 }

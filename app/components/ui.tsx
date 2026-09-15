@@ -180,7 +180,7 @@ export function ContentSlide({
 
 /**
  * Concept visual sized to the asset's 16:9 ratio.
- * Height drives width so diagrams fill the frame (no wide letterboxed strip).
+ * Sizing lives in `.slide-visual` (globals.css) so the frame stays filled.
  */
 export function SlideVisual({
   src,
@@ -193,21 +193,16 @@ export function SlideVisual({
   size?: "md" | "lg";
   className?: string;
 }) {
-  const heightClass =
-    size === "lg"
-      ? "h-[clamp(7.75rem,21vh,12rem)]"
-      : "h-[clamp(7.25rem,19vh,11rem)]";
-
   return (
     <motion.div
       variants={staggerItem}
-      className={`relative mx-auto aspect-[16/9] w-auto max-w-full shrink-0 overflow-hidden rounded-2xl border border-[var(--line)] bg-[rgba(8,14,26,0.55)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${heightClass} ${className}`}
+      className={`slide-visual ${size === "lg" ? "slide-visual--lg" : ""} ${className}`}
     >
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-contain object-center p-1 sm:p-1.5"
+        className="object-contain object-center"
         sizes="(max-width: 900px) 88vw, 640px"
       />
     </motion.div>

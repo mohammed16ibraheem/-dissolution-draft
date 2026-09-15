@@ -411,39 +411,39 @@ export function SlideCommission() {
       title="Commission model"
       lead="5% of Commissionable Profit on eligible Osama-originated external business."
     >
-      <Stagger className="flex min-h-0 flex-1 flex-col gap-3">
+      <Stagger className="flex min-h-0 flex-1 flex-col gap-2.5 sm:gap-3">
         <SlideVisual
           src="/presentation/commission-formula.png"
           alt="Commissionable profit formula: revenue less direct costs, then 5% to partner"
         />
         <div className="grid min-h-0 flex-1 items-stretch gap-3 lg:grid-cols-3 lg:gap-4">
-          <Card>
+          <Card className="min-h-0">
             <div className="flex items-center gap-3">
               <IconMark icon={Scale} />
               <p className="text-xs tracking-[0.22em] text-[var(--accent)] uppercase">The principle</p>
             </div>
-            <div className="mt-4 flex min-h-0 flex-1 flex-col justify-center space-y-2.5 text-sm sm:space-y-3">
+            <div className="mt-2.5 flex min-h-0 flex-1 flex-col justify-center gap-1.5 sm:mt-3 sm:gap-2">
               <Row label="Customer revenue" note="actually collected" />
-              <p className="text-center text-[var(--accent)]">less</p>
+              <p className="text-center text-xs text-[var(--accent)] sm:text-sm">less</p>
               <Row label="Direct costs" note="attributable to delivering the business" />
-              <div className="hairline my-2" />
-              <p className="font-display text-center text-lg text-[var(--accent-soft)] sm:text-xl">
+              <div className="hairline my-1" />
+              <p className="font-display shrink-0 text-center text-base text-[var(--accent-soft)] sm:text-lg">
                 Commissionable Profit
               </p>
             </div>
           </Card>
-          <Card tone="accent" className="items-center justify-center text-center">
+          <Card tone="accent" className="min-h-0 items-center justify-center text-center">
             <IconMark icon={Percent} />
-            <p className="mt-3 text-xs tracking-[0.28em] uppercase">Osama receives</p>
-            <p className="font-display accent-text mt-2 text-[clamp(3.2rem,6.5vw,5rem)] leading-none">
+            <p className="mt-2 text-xs tracking-[0.28em] uppercase">Osama receives</p>
+            <p className="font-display accent-text mt-1 text-[clamp(2.6rem,5.5vw,4.5rem)] leading-none">
               5%
             </p>
-            <p className="mt-3 max-w-xs text-sm text-[var(--muted)]">
+            <p className="mt-2 max-w-[16rem] text-xs leading-relaxed text-[var(--muted)] sm:text-sm">
               of Commissionable Profit. Payment follows customer collection. Milestone collections can
               trigger proportionate commission.
             </p>
           </Card>
-          <Card>
+          <Card className="min-h-0">
             <div className="flex items-center gap-3">
               <IconMark icon={Calculator} tone="teal" />
               <p className="text-xs tracking-[0.22em] text-[var(--teal)] uppercase">Direct cost examples</p>
@@ -460,7 +460,7 @@ export function SlideCommission() {
                 "Other agreed direct project costs",
               ]}
             />
-            <p className="mt-3 text-xs text-[var(--muted)]">
+            <p className="mt-auto pt-2 text-xs text-[var(--muted)]">
               General MDBC overhead is not normally allocated.
             </p>
           </Card>
@@ -495,7 +495,7 @@ export function SlideExample() {
               <motion.div
                 key={row.l}
                 variants={staggerItem}
-                className="flex items-center justify-between gap-4 px-5 py-2.5 sm:px-6 sm:py-3"
+                className="flex items-center justify-between gap-4 px-4 py-2 sm:px-5 sm:py-2.5"
               >
                 <span
                   className={
@@ -892,37 +892,37 @@ export function SlideClose() {
   ];
 
   return (
-    <div className="flex h-full min-h-0 flex-col justify-between px-[clamp(1.1rem,5.5vw,5.5rem)] py-[clamp(0.5rem,2.5vh,1.5rem)]">
-      <p className="text-[10px] tracking-[0.28em] text-[var(--teal)] uppercase sm:text-xs">
+    <div className="flex h-full min-h-0 flex-col justify-between gap-3 px-[clamp(1.1rem,5.5vw,5.5rem)] py-[clamp(0.35rem,1.8vh,1.15rem)]">
+      <p className="shrink-0 text-[10px] tracking-[0.28em] text-[var(--teal)] uppercase sm:text-xs">
         Discussion Draft · 15 September 2026
       </p>
-      <div>
+      <div className="min-h-0 shrink">
         <p className="font-display text-sm tracking-[0.4em] text-[var(--accent)] uppercase">
           The Goal
         </p>
-        <h2 className="font-display mt-3 max-w-4xl text-[clamp(1.7rem,4.2vw,3.8rem)] leading-[1.02] font-semibold sm:mt-4">
+        <h2 className="font-display mt-2 max-w-4xl text-[clamp(1.55rem,3.8vw,3.4rem)] leading-[1.05] font-semibold sm:mt-3">
           Build customer accounts —
           <br />
           <span className="accent-text">not one-off transactions.</span>
         </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] sm:mt-5 sm:text-lg">
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--muted)] sm:mt-4 sm:text-base">
           Osama creates market access. MDBC converts it into solutions, delivery, recurring revenue and long-term customer value.
         </p>
       </div>
-      <Stagger className="flex flex-col gap-3">
+      <Stagger className="flex min-h-0 shrink-0 flex-col gap-2.5 sm:gap-3">
         <SlideVisual
           src="/presentation/account-growth.png"
           alt="Customer account growth: Open, Win, Deliver, Grow"
           size="lg"
         />
-        <div className="grid gap-3 sm:grid-cols-4">
+        <div className="grid items-stretch gap-2.5 sm:grid-cols-4 sm:gap-3">
           {steps.map((step, i) => (
-            <Card key={step.t} className="px-4 py-3.5 text-center sm:py-4">
+            <Card key={step.t} className="px-3 py-3 text-center sm:px-4 sm:py-3.5">
               <div className="flex justify-center">
                 <IconMark icon={step.icon} />
               </div>
-              <p className="mt-2 text-xs text-[var(--accent)]">0{i + 1}</p>
-              <p className="font-display mt-1 text-base sm:text-lg">{step.t}</p>
+              <p className="mt-1.5 text-[11px] text-[var(--accent)]">0{i + 1}</p>
+              <p className="font-display mt-0.5 text-sm sm:text-base">{step.t}</p>
             </Card>
           ))}
         </div>
@@ -955,9 +955,9 @@ function Arrow() {
 
 function Row({ label, note }: { label: string; note: string }) {
   return (
-    <div className="rounded-xl border border-white/8 bg-white/4 px-4 py-3">
-      <p className="font-medium">{label}</p>
-      <p className="text-xs text-[var(--muted)]">{note}</p>
+    <div className="rounded-xl border border-white/8 bg-white/4 px-3 py-2 sm:px-3.5 sm:py-2.5">
+      <p className="text-sm font-medium">{label}</p>
+      <p className="text-[11px] text-[var(--muted)] sm:text-xs">{note}</p>
     </div>
   );
 }
