@@ -68,32 +68,32 @@ export const SLIDE_TITLES = [
 
 export function SlideCover() {
   return (
-    <div className="flex h-full min-h-0 flex-col justify-between px-[clamp(1.1rem,5.5vw,5.5rem)] py-[clamp(0.4rem,2vh,1.25rem)]">
-      <div className="flex items-center justify-between gap-4">
+    <div className="flex h-full min-h-0 flex-col justify-between gap-3 px-[clamp(1.1rem,5.5vw,5.5rem)] py-[clamp(0.35rem,1.8vh,1.1rem)]">
+      <div className="flex shrink-0 items-center justify-between gap-4">
         <Pill>Confidential · Internal Discussion</Pill>
         <p className="text-[10px] tracking-[0.22em] text-[var(--muted)] uppercase sm:text-xs">
           15 September 2026
         </p>
       </div>
 
-      <div className="max-w-5xl">
-        <Logo size="cover" className="mb-5 sm:mb-6" />
+      <div className="min-h-0 max-w-5xl flex-1 content-center">
+        <Logo size="cover" className="mb-3 sm:mb-5" />
         <p className="font-display text-xs tracking-[0.42em] text-[var(--teal)] uppercase sm:text-sm">
           MDBC × Osama Naseem
         </p>
-        <div className="mt-4 h-px w-24 bg-[var(--gold)] sm:mt-5" />
-        <h1 className="font-display mt-4 text-[clamp(2.05rem,5.6vw,5.6rem)] leading-[0.94] font-semibold tracking-tight sm:mt-6">
+        <div className="mt-3 h-px w-24 bg-[var(--gold)] sm:mt-4" />
+        <h1 className="font-display mt-3 text-[clamp(1.85rem,5.2vw,5.2rem)] leading-[0.96] font-semibold tracking-tight sm:mt-5">
           External Business
           <br />
           <span className="gold-text">Partnership Model</span>
         </h1>
-        <p className="mt-4 max-w-2xl text-[clamp(0.92rem,1.45vw,1.28rem)] leading-relaxed text-[var(--muted)] sm:mt-6">
+        <p className="mt-3 max-w-2xl text-[clamp(0.88rem,1.35vw,1.2rem)] leading-relaxed text-[var(--muted)] sm:mt-5">
           Turning relationships into qualified opportunities, profitable delivery
           and recurring customer accounts.
         </p>
       </div>
 
-      <Stagger className="grid gap-3 md:grid-cols-3 md:gap-4">
+      <Stagger className="grid shrink-0 items-stretch gap-3 md:grid-cols-3 md:gap-4">
         {[
           {
             k: "01",
@@ -114,13 +114,13 @@ export function SlideCover() {
             icon: Percent,
           },
         ].map((item) => (
-          <Card key={item.k}>
+          <Card key={item.k} className="min-h-[7.5rem]">
             <div className="flex items-start justify-between gap-3">
               <p className="text-xs tracking-[0.28em] text-[var(--gold)]">{item.k}</p>
               <IconMark icon={item.icon} />
             </div>
-            <h3 className="font-display mt-3 text-lg sm:text-xl">{item.t}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{item.d}</p>
+            <h3 className="font-display mt-2 text-lg sm:mt-2.5 sm:text-xl">{item.t}</h3>
+            <p className="mt-1.5 text-sm leading-relaxed text-[var(--muted)]">{item.d}</p>
           </Card>
         ))}
       </Stagger>
@@ -139,10 +139,10 @@ export function SlideOpportunity() {
         <SlideVisual
           src="/presentation/market-access-delivery.png"
           alt="Market access opens the door; MDBC delivers the solution"
-          className="h-[clamp(4.25rem,11vh,6.75rem)]"
+          className="h-[clamp(5rem,14vh,8rem)]"
         />
         <div className="grid min-h-0 flex-1 items-stretch gap-3 xl:grid-cols-3 xl:gap-4">
-          <Card>
+          <Card className="min-h-0">
             <div className="flex items-center gap-3">
               <IconMark icon={Handshake} />
               <p className="text-xs tracking-[0.22em] text-[var(--gold)] uppercase">Osama brings</p>
@@ -158,7 +158,7 @@ export function SlideOpportunity() {
               ]}
             />
           </Card>
-          <Card tone="teal">
+          <Card tone="teal" className="min-h-0">
             <div className="flex items-center gap-3">
               <IconMark icon={Building2} tone="teal" />
               <p className="text-xs tracking-[0.22em] text-[var(--teal)] uppercase">MDBC brings</p>
@@ -174,7 +174,7 @@ export function SlideOpportunity() {
               ]}
             />
           </Card>
-          <Card tone="gold">
+          <Card tone="gold" className="min-h-0">
             <div className="flex items-center gap-3">
               <IconMark icon={Target} />
               <p className="text-xs tracking-[0.22em] text-[var(--gold-soft)] uppercase">Joint outcome</p>
@@ -191,7 +191,7 @@ export function SlideOpportunity() {
             />
           </Card>
         </div>
-        <div className="flex shrink-0 flex-wrap items-center justify-center gap-3 rounded-full border border-[var(--line)] bg-white/4 px-5 py-2 text-center text-[10px] tracking-[0.18em] text-[var(--gold-soft)] uppercase sm:text-xs">
+        <div className="flex shrink-0 flex-wrap items-center justify-center gap-2 rounded-full border border-[var(--line)] bg-white/4 px-4 py-1.5 text-center text-[10px] tracking-[0.16em] text-[var(--gold-soft)] uppercase sm:gap-3 sm:px-5 sm:py-2 sm:text-xs">
           Relationships <Arrow /> Solutions <Arrow /> Revenue <Arrow /> Recurring accounts
         </div>
       </Stagger>
@@ -267,26 +267,26 @@ export function SlideRevenue() {
         <SlideVisual
           src="/presentation/revenue-flywheel.png"
           alt="Revenue flywheel: Land, Deliver, Support, Expand"
-          className="h-[clamp(4.5rem,12vh,7.25rem)]"
+          className="h-[clamp(5rem,14vh,8rem)]"
         />
         <div className="grid min-h-0 flex-1 items-stretch gap-3 md:grid-cols-4 md:gap-4">
           {stages.map((stage, i) => (
-            <Card key={stage.t}>
+            <Card key={stage.t} className="min-h-0">
               <div className="flex items-start justify-between gap-3">
                 <p className="text-[11px] tracking-[0.28em] text-[var(--gold)]">
                   STAGE 0{i + 1}
                 </p>
                 <IconMark icon={stage.icon} tone={i % 2 ? "teal" : "gold"} />
               </div>
-              <h3 className="font-display mt-2 text-lg sm:mt-3 sm:text-xl">{stage.t}</h3>
-              <p className="mt-1.5 text-sm text-[var(--teal)]">{stage.s}</p>
-              <p className="mt-auto pt-2 text-xs leading-relaxed text-[var(--muted)] sm:pt-3 sm:text-sm">
+              <h3 className="font-display mt-2 text-lg sm:mt-2.5 sm:text-xl">{stage.t}</h3>
+              <p className="mt-1 text-sm text-[var(--teal)]">{stage.s}</p>
+              <p className="mt-auto pt-2 text-xs leading-relaxed text-[var(--muted)] sm:text-sm">
                 {stage.d}
               </p>
             </Card>
           ))}
         </div>
-        <p className="shrink-0 text-center text-sm tracking-[0.08em] text-[var(--gold-soft)]">
+        <p className="shrink-0 text-center text-xs tracking-[0.08em] text-[var(--gold-soft)] sm:text-sm">
           Commercial objective: convert transactions into recurring MDBC customer accounts.
         </p>
       </Stagger>
@@ -371,21 +371,21 @@ export function SlideOperating() {
       title="Opportunity-to-commission operating model"
       lead="One transparent flow from lead origination to realized profit."
     >
-      <Stagger className="grid shrink-0 grid-cols-2 gap-2.5 sm:grid-cols-4 xl:grid-cols-8">
+      <Stagger className="grid shrink-0 grid-cols-2 gap-2 sm:grid-cols-4 xl:grid-cols-8 xl:gap-2.5">
         {steps.map((step) => (
           <motion.div
             key={step.n}
             variants={staggerItem}
-            className="panel flex min-h-[100px] flex-col items-center justify-center rounded-2xl px-2 py-3.5 text-center sm:min-h-[118px] sm:py-4"
+            className="panel flex min-h-[88px] flex-col items-center justify-center rounded-2xl px-2 py-3 text-center sm:min-h-[100px] sm:py-3.5"
           >
             <IconMark icon={step.icon} />
-            <span className="font-display mt-2 text-2xl text-[var(--gold)] sm:text-3xl">{step.n}</span>
-            <p className="mt-1.5 text-xs leading-snug sm:mt-2 sm:text-sm">{step.t}</p>
+            <span className="font-display mt-1.5 text-xl text-[var(--gold)] sm:mt-2 sm:text-2xl">{step.n}</span>
+            <p className="mt-1 text-[11px] leading-snug sm:text-xs">{step.t}</p>
           </motion.div>
         ))}
       </Stagger>
-      <Stagger className="grid min-h-0 flex-1 items-stretch gap-3 md:grid-cols-2 md:gap-4">
-        <Card className="justify-center">
+      <Stagger className="grid shrink-0 items-stretch gap-3 md:grid-cols-2 md:gap-4">
+        <Card className="justify-center !h-auto min-h-[5.5rem]">
           <div className="flex items-start gap-3">
             <IconMark icon={Wallet} />
             <p className="text-sm leading-relaxed text-[var(--muted)]">
@@ -393,7 +393,7 @@ export function SlideOperating() {
             </p>
           </div>
         </Card>
-        <Card tone="gold" className="justify-center">
+        <Card tone="gold" className="justify-center !h-auto min-h-[5.5rem]">
           <div className="flex items-start gap-3">
             <IconMark icon={ClipboardCheck} />
             <p className="text-sm leading-relaxed text-[var(--cream)]/90">

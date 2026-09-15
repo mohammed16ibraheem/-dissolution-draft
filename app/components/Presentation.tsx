@@ -174,18 +174,27 @@ export default function Presentation() {
       </div>
 
       <header className="absolute top-3 right-0 left-0 z-30 flex items-center justify-between px-[clamp(1rem,4.5vw,3.5rem)] pt-1">
-        <div className="flex items-center gap-3">
-          <Logo size="header" />
-          <div className="hidden sm:block">
-            <p className="font-display text-[11px] tracking-[0.22em] text-[var(--gold-soft)] uppercase">
-              MDBC × Osama Naseem
+        <div className="flex min-w-0 items-center gap-3">
+          {/* Cover carries the brand hero — hide duplicate chrome there */}
+          {index === 0 ? (
+            <p className="text-[10px] tracking-[0.2em] text-[var(--dim)] uppercase sm:text-[11px]">
+              Discussion draft
             </p>
-            <p className="text-[10px] tracking-[0.16em] text-[var(--dim)] uppercase">
-              Business Partnership Model
-            </p>
-          </div>
+          ) : (
+            <>
+              <Logo size="header" />
+              <div className="hidden min-w-0 sm:block">
+                <p className="font-display text-[11px] tracking-[0.22em] text-[var(--gold-soft)] uppercase">
+                  MDBC × Osama Naseem
+                </p>
+                <p className="truncate text-[10px] tracking-[0.16em] text-[var(--dim)] uppercase">
+                  Business Partnership Model
+                </p>
+              </div>
+            </>
+          )}
         </div>
-        <div className="flex items-center gap-3 text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase">
+        <div className="flex shrink-0 items-center gap-3 text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase">
           <span className="tabular-nums">
             {String(index + 1).padStart(2, "0")} / {String(TOTAL).padStart(2, "0")}
           </span>
