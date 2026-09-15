@@ -96,10 +96,14 @@ export function Card({
 }: {
   children: ReactNode;
   className?: string;
-  tone?: "default" | "gold" | "teal";
+  tone?: "default" | "accent" | "gold" | "teal";
 }) {
   const toneClass =
-    tone === "gold" ? "panel-gold" : tone === "teal" ? "panel-teal" : "panel";
+    tone === "accent" || tone === "gold"
+      ? "panel-accent"
+      : tone === "teal"
+        ? "panel-teal"
+        : "panel";
   return (
     <motion.div
       variants={staggerItem}
@@ -143,7 +147,7 @@ export function BulletList({
               : "text-[0.84rem] sm:text-[0.92rem]"
           }`}
         >
-          <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--gold)]" />
+          <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" />
           <span>{item}</span>
         </li>
       ))}
@@ -174,28 +178,37 @@ export function ContentSlide({
   );
 }
 
-/** Compact concept visual — full diagram visible (object-contain), not a cropped strip. */
+/**
+ * Concept visual sized to the asset's 16:9 ratio.
+ * Height drives width so the diagram fills the frame (no letterboxed strip).
+ */
 export function SlideVisual({
   src,
   alt,
+  size = "md",
   className = "",
 }: {
   src: string;
   alt: string;
+  size?: "md" | "lg";
   className?: string;
 }) {
+  const heightClass =
+    size === "lg"
+      ? "h-[clamp(8.5rem,26vh,13.5rem)]"
+      : "h-[clamp(8.25rem,24vh,12.75rem)]";
+
   return (
     <motion.div
       variants={staggerItem}
-      className={`relative w-full max-w-full shrink-0 overflow-hidden rounded-2xl border border-[var(--line)] bg-[rgba(8,14,26,0.72)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${className}`}
+      className={`relative mx-auto aspect-[16/9] w-auto max-w-full shrink-0 overflow-hidden rounded-2xl border border-[var(--line)] bg-[rgba(8,14,26,0.55)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${heightClass} ${className}`}
     >
       <Image
         src={src}
         alt={alt}
-        width={1600}
-        height={900}
-        className="h-full w-full object-contain object-center p-1.5 sm:p-2"
-        sizes="(max-width: 1280px) 92vw, 1100px"
+        fill
+        className="object-contain object-center p-1 sm:p-1.5"
+        sizes="(max-width: 900px) 88vw, 720px"
       />
     </motion.div>
   );

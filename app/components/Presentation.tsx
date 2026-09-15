@@ -159,7 +159,7 @@ export default function Presentation() {
         transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="orb orb-gold"
+        className="orb orb-silver"
         animate={reduceMotion ? undefined : { x: [0, -16, 0], y: [0, 12, 0], scale: [1, 1.08, 1] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
@@ -184,7 +184,7 @@ export default function Presentation() {
             <>
               <Logo size="header" />
               <div className="hidden min-w-0 sm:block">
-                <p className="font-display text-[11px] tracking-[0.22em] text-[var(--gold-soft)] uppercase">
+                <p className="font-display text-[11px] tracking-[0.22em] text-[var(--accent-soft)] uppercase">
                   MDBC × Osama Naseem
                 </p>
                 <p className="truncate text-[10px] tracking-[0.16em] text-[var(--dim)] uppercase">
@@ -298,7 +298,7 @@ export default function Presentation() {
           >
             <div className="mb-8 flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs tracking-[0.28em] text-[var(--gold)] uppercase">Overview</p>
+                <p className="text-xs tracking-[0.28em] text-[var(--accent)] uppercase">Overview</p>
                 <h2 className="font-display mt-2 text-3xl">Jump to a slide</h2>
               </div>
               <button type="button" className="nav-btn w-auto px-4" onClick={() => setOverview(false)}>
@@ -315,10 +315,10 @@ export default function Presentation() {
                     setOverview(false);
                   }}
                   className={`panel rounded-2xl p-4 text-left transition ${
-                    i === index ? "panel-gold" : ""
+                    i === index ? "panel-accent" : ""
                   }`}
                 >
-                  <p className="text-xs tracking-[0.22em] text-[var(--gold)]">
+                  <p className="text-xs tracking-[0.22em] text-[var(--accent)]">
                     {String(i + 1).padStart(2, "0")}
                   </p>
                   <p className="font-display mt-2 text-base leading-snug">{title}</p>

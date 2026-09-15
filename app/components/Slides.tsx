@@ -81,11 +81,11 @@ export function SlideCover() {
         <p className="font-display text-xs tracking-[0.42em] text-[var(--teal)] uppercase sm:text-sm">
           MDBC × Osama Naseem
         </p>
-        <div className="mt-3 h-px w-24 bg-[var(--gold)] sm:mt-4" />
+        <div className="mt-3 h-px w-24 bg-[var(--accent)] sm:mt-4" />
         <h1 className="font-display mt-3 text-[clamp(1.85rem,5.2vw,5.2rem)] leading-[0.96] font-semibold tracking-tight sm:mt-5">
           External Business
           <br />
-          <span className="gold-text">Partnership Model</span>
+          <span className="accent-text">Partnership Model</span>
         </h1>
         <p className="mt-3 max-w-2xl text-[clamp(0.88rem,1.35vw,1.2rem)] leading-relaxed text-[var(--muted)] sm:mt-5">
           Turning relationships into qualified opportunities, profitable delivery
@@ -116,7 +116,7 @@ export function SlideCover() {
         ].map((item) => (
           <Card key={item.k} className="min-h-[7.5rem]">
             <div className="flex items-start justify-between gap-3">
-              <p className="text-xs tracking-[0.28em] text-[var(--gold)]">{item.k}</p>
+              <p className="text-xs tracking-[0.28em] text-[var(--accent)]">{item.k}</p>
               <IconMark icon={item.icon} />
             </div>
             <h3 className="font-display mt-2 text-lg sm:mt-2.5 sm:text-xl">{item.t}</h3>
@@ -139,13 +139,12 @@ export function SlideOpportunity() {
         <SlideVisual
           src="/presentation/market-access-delivery.png"
           alt="Market access opens the door; MDBC delivers the solution"
-          className="h-[clamp(5rem,14vh,8rem)]"
         />
         <div className="grid min-h-0 flex-1 items-stretch gap-3 xl:grid-cols-3 xl:gap-4">
           <Card className="min-h-0">
             <div className="flex items-center gap-3">
               <IconMark icon={Handshake} />
-              <p className="text-xs tracking-[0.22em] text-[var(--gold)] uppercase">Osama brings</p>
+              <p className="text-xs tracking-[0.22em] text-[var(--accent)] uppercase">Osama brings</p>
             </div>
             <BulletList
               compact
@@ -174,10 +173,10 @@ export function SlideOpportunity() {
               ]}
             />
           </Card>
-          <Card tone="gold" className="min-h-0">
+          <Card tone="accent" className="min-h-0">
             <div className="flex items-center gap-3">
               <IconMark icon={Target} />
-              <p className="text-xs tracking-[0.22em] text-[var(--gold-soft)] uppercase">Joint outcome</p>
+              <p className="text-xs tracking-[0.22em] text-[var(--accent-soft)] uppercase">Joint outcome</p>
             </div>
             <BulletList
               compact
@@ -191,7 +190,7 @@ export function SlideOpportunity() {
             />
           </Card>
         </div>
-        <div className="flex shrink-0 flex-wrap items-center justify-center gap-2 rounded-full border border-[var(--line)] bg-white/4 px-4 py-1.5 text-center text-[10px] tracking-[0.16em] text-[var(--gold-soft)] uppercase sm:gap-3 sm:px-5 sm:py-2 sm:text-xs">
+        <div className="flex shrink-0 flex-wrap items-center justify-center gap-2 rounded-full border border-[var(--line)] bg-white/4 px-4 py-1.5 text-center text-[10px] tracking-[0.16em] text-[var(--accent-soft)] uppercase sm:gap-3 sm:px-5 sm:py-2 sm:text-xs">
           Relationships <Arrow /> Solutions <Arrow /> Revenue <Arrow /> Recurring accounts
         </div>
       </Stagger>
@@ -237,7 +236,7 @@ export function SlideMarket() {
         {pillars.map((p) => (
           <Card key={p.n}>
             <div className="flex items-start justify-between gap-3">
-              <p className="gold-text font-display text-xl sm:text-2xl">{p.n}</p>
+              <p className="accent-text font-display text-xl sm:text-2xl">{p.n}</p>
               <IconMark icon={p.icon} />
             </div>
             <h3 className="font-display mt-3 text-base leading-snug sm:text-lg">{p.t}</h3>
@@ -267,16 +266,15 @@ export function SlideRevenue() {
         <SlideVisual
           src="/presentation/revenue-flywheel.png"
           alt="Revenue flywheel: Land, Deliver, Support, Expand"
-          className="h-[clamp(5rem,14vh,8rem)]"
         />
         <div className="grid min-h-0 flex-1 items-stretch gap-3 md:grid-cols-4 md:gap-4">
           {stages.map((stage, i) => (
             <Card key={stage.t} className="min-h-0">
               <div className="flex items-start justify-between gap-3">
-                <p className="text-[11px] tracking-[0.28em] text-[var(--gold)]">
+                <p className="text-[11px] tracking-[0.28em] text-[var(--accent)]">
                   STAGE 0{i + 1}
                 </p>
-                <IconMark icon={stage.icon} tone={i % 2 ? "teal" : "gold"} />
+                <IconMark icon={stage.icon} tone={i % 2 ? "teal" : "accent"} />
               </div>
               <h3 className="font-display mt-2 text-lg sm:mt-2.5 sm:text-xl">{stage.t}</h3>
               <p className="mt-1 text-sm text-[var(--teal)]">{stage.s}</p>
@@ -286,7 +284,7 @@ export function SlideRevenue() {
             </Card>
           ))}
         </div>
-        <p className="shrink-0 text-center text-xs tracking-[0.08em] text-[var(--gold-soft)] sm:text-sm">
+        <p className="shrink-0 text-center text-xs tracking-[0.08em] text-[var(--accent-soft)] sm:text-sm">
           Commercial objective: convert transactions into recurring MDBC customer accounts.
         </p>
       </Stagger>
@@ -305,7 +303,7 @@ export function SlideRoles() {
         <Card>
           <div className="flex items-start gap-3">
             <IconMark icon={UserRound} />
-            <p className="text-xs tracking-[0.2em] text-[var(--gold)] uppercase">
+            <p className="text-xs tracking-[0.2em] text-[var(--accent)] uppercase">
               Osama Naseem · Business Development Partner
             </p>
           </div>
@@ -344,7 +342,7 @@ export function SlideRoles() {
               "Support, SLA and account management",
             ]}
           />
-          <p className="mt-auto border-t border-[var(--line)] pt-3 text-sm leading-relaxed text-[var(--gold-soft)] sm:pt-4">
+          <p className="mt-auto border-t border-[var(--line)] pt-3 text-sm leading-relaxed text-[var(--accent-soft)] sm:pt-4">
             MDBC remains the contracting, invoicing and delivery entity.
           </p>
         </Card>
@@ -379,7 +377,7 @@ export function SlideOperating() {
             className="panel flex min-h-[88px] flex-col items-center justify-center rounded-2xl px-2 py-3 text-center sm:min-h-[100px] sm:py-3.5"
           >
             <IconMark icon={step.icon} />
-            <span className="font-display mt-1.5 text-xl text-[var(--gold)] sm:mt-2 sm:text-2xl">{step.n}</span>
+            <span className="font-display mt-1.5 text-xl text-[var(--accent)] sm:mt-2 sm:text-2xl">{step.n}</span>
             <p className="mt-1 text-[11px] leading-snug sm:text-xs">{step.t}</p>
           </motion.div>
         ))}
@@ -393,7 +391,7 @@ export function SlideOperating() {
             </p>
           </div>
         </Card>
-        <Card tone="gold" className="justify-center !h-auto min-h-[5.5rem]">
+        <Card tone="accent" className="justify-center !h-auto min-h-[5.5rem]">
           <div className="flex items-start gap-3">
             <IconMark icon={ClipboardCheck} />
             <p className="text-sm leading-relaxed text-[var(--cream)]/90">
@@ -417,28 +415,27 @@ export function SlideCommission() {
         <SlideVisual
           src="/presentation/commission-formula.png"
           alt="Commissionable profit formula: revenue less direct costs, then 5% to partner"
-          className="h-[clamp(4.5rem,12vh,7.25rem)]"
         />
         <div className="grid min-h-0 flex-1 items-stretch gap-3 xl:grid-cols-3 xl:gap-4">
           <Card>
             <div className="flex items-center gap-3">
               <IconMark icon={Scale} />
-              <p className="text-xs tracking-[0.22em] text-[var(--gold)] uppercase">The principle</p>
+              <p className="text-xs tracking-[0.22em] text-[var(--accent)] uppercase">The principle</p>
             </div>
             <div className="mt-4 flex min-h-0 flex-1 flex-col justify-center space-y-2.5 text-sm sm:space-y-3">
               <Row label="Customer revenue" note="actually collected" />
-              <p className="text-center text-[var(--gold)]">less</p>
+              <p className="text-center text-[var(--accent)]">less</p>
               <Row label="Direct costs" note="attributable to delivering the business" />
               <div className="hairline my-2" />
-              <p className="font-display text-center text-lg text-[var(--gold-soft)] sm:text-xl">
+              <p className="font-display text-center text-lg text-[var(--accent-soft)] sm:text-xl">
                 Commissionable Profit
               </p>
             </div>
           </Card>
-          <Card tone="gold" className="items-center justify-center text-center">
+          <Card tone="accent" className="items-center justify-center text-center">
             <IconMark icon={Percent} />
             <p className="mt-3 text-xs tracking-[0.28em] uppercase">Osama receives</p>
-            <p className="font-display gold-text mt-2 text-[clamp(3.2rem,6.5vw,5rem)] leading-none">
+            <p className="font-display accent-text mt-2 text-[clamp(3.2rem,6.5vw,5rem)] leading-none">
               5%
             </p>
             <p className="mt-3 max-w-xs text-sm text-[var(--muted)]">
@@ -481,7 +478,7 @@ export function SlideExample() {
     { l: "Project-specific implementation", v: "(SAR 20,000)", tone: "cost" as const },
     { l: "Other direct costs", v: "(SAR 10,000)", tone: "cost" as const },
     { l: "Commissionable profit", v: "SAR 100,000", tone: "profit" as const },
-    { l: "Osama commission @ 5%", v: "SAR 5,000", tone: "gold" as const },
+    { l: "Osama commission @ 5%", v: "SAR 5,000", tone: "accent" as const },
     { l: "Balance to MDBC", v: "SAR 95,000", tone: "teal" as const },
   ];
 
@@ -502,7 +499,7 @@ export function SlideExample() {
               >
                 <span
                   className={
-                    row.tone === "profit" || row.tone === "gold"
+                    row.tone === "profit" || row.tone === "accent"
                       ? "text-sm font-medium sm:text-base"
                       : "text-sm text-[var(--muted)] sm:text-base"
                   }
@@ -511,8 +508,8 @@ export function SlideExample() {
                 </span>
                 <span
                   className={`font-display text-base sm:text-lg ${
-                    row.tone === "gold"
-                      ? "text-[var(--gold)]"
+                    row.tone === "accent"
+                      ? "text-[var(--accent)]"
                       : row.tone === "teal"
                         ? "text-[var(--teal)]"
                         : row.tone === "profit"
@@ -529,7 +526,7 @@ export function SlideExample() {
           </Stagger>
         </Card>
         <Stagger className="flex h-full min-h-0 flex-col gap-3 sm:gap-4">
-          <Card tone="gold" className="flex-1 items-center justify-center text-center">
+          <Card tone="accent" className="flex-1 items-center justify-center text-center">
             <IconMark icon={Wallet} />
             <p className="mt-3 text-xs tracking-[0.22em] uppercase">Osama</p>
             <p className="font-display mt-2 text-3xl sm:text-4xl">SAR 5,000</p>
@@ -561,7 +558,7 @@ export function SlideAttribution() {
         <Card>
           <div className="flex items-center gap-3">
             <IconMark icon={ClipboardCheck} />
-            <p className="text-xs tracking-[0.22em] text-[var(--gold)] uppercase">Lead registration</p>
+            <p className="text-xs tracking-[0.22em] text-[var(--accent)] uppercase">Lead registration</p>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
             Every opportunity is registered before substantive pursuit.
@@ -579,7 +576,7 @@ export function SlideAttribution() {
             MDBC confirms: “Registered — Osama Originated.”
           </p>
         </Card>
-        <Card tone="gold">
+        <Card tone="accent">
           <div className="flex items-center gap-3">
             <IconMark icon={CalendarRange} />
             <p className="text-xs tracking-[0.22em] uppercase">Account attribution</p>
@@ -588,7 +585,7 @@ export function SlideAttribution() {
           <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
             Recommended starting position: 12-month attribution from first commercial engagement. Qualifying cross-sell during that period remains commissionable.
           </p>
-          <p className="mt-auto pt-4 text-sm text-[var(--gold-soft)]">12 vs 24 months to be agreed.</p>
+          <p className="mt-auto pt-4 text-sm text-[var(--accent-soft)]">12 vs 24 months to be agreed.</p>
         </Card>
         <Card tone="teal">
           <div className="flex items-center gap-3">
@@ -601,7 +598,7 @@ export function SlideAttribution() {
           <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
             Renewals: define separately — stop, reduce %, or continue only with active partner involvement.
           </p>
-          <p className="mt-auto pt-4 text-sm text-[var(--gold-soft)]">
+          <p className="mt-auto pt-4 text-sm text-[var(--accent-soft)]">
             Avoid perpetual automatic commission.
           </p>
         </Card>
@@ -654,7 +651,7 @@ export function SlideGuardrails() {
         {rules.map((rule, i) => (
           <Card key={rule.t}>
             <div className="flex items-start justify-between gap-3">
-              <p className="gold-text font-display text-lg sm:text-xl">0{i + 1}</p>
+              <p className="accent-text font-display text-lg sm:text-xl">0{i + 1}</p>
               <IconMark icon={rule.icon} />
             </div>
             <h3 className="font-display mt-3 text-base sm:text-lg">{rule.t}</h3>
@@ -685,16 +682,16 @@ export function SlideConversation() {
       <Stagger className="grid min-h-0 flex-1 items-stretch gap-2.5 sm:grid-cols-2 sm:gap-3">
         {qs.map((q, i) => (
           <motion.div key={q} variants={staggerItem} className="panel flex h-full items-start gap-4 rounded-2xl p-3.5 sm:p-4">
-            <span className="font-display grid h-10 w-10 shrink-0 place-items-center rounded-full border border-[var(--line)] text-[var(--gold)]">
+            <span className="font-display grid h-10 w-10 shrink-0 place-items-center rounded-full border border-[var(--line)] text-[var(--accent)]">
               {i + 1}
             </span>
             <p className="pt-1.5 text-[0.9rem] leading-snug sm:text-[0.98rem]">{q}</p>
           </motion.div>
         ))}
       </Stagger>
-      <blockquote className="panel-gold flex shrink-0 items-center justify-center gap-3 rounded-2xl px-5 py-4 text-center sm:px-6 sm:py-5">
-        <MessageCircleQuestion className="hidden h-5 w-5 shrink-0 text-[var(--gold)] sm:block" strokeWidth={1.75} />
-        <p className="font-display text-base text-[var(--gold-soft)] italic sm:text-lg">
+      <blockquote className="panel-accent flex shrink-0 items-center justify-center gap-3 rounded-2xl px-5 py-4 text-center sm:px-6 sm:py-5">
+        <MessageCircleQuestion className="hidden h-5 w-5 shrink-0 text-[var(--accent)] sm:block" strokeWidth={1.75} />
+        <p className="font-display text-base text-[var(--accent-soft)] italic sm:text-lg">
           “I work with MDBC. Let me bring their technical team in to assess this properly.”
         </p>
       </blockquote>
@@ -728,7 +725,7 @@ export function SlidePipeline() {
             variants={staggerItem}
             className="rounded-full border border-[var(--line)] bg-white/4 px-3 py-1.5 text-xs tracking-wide"
           >
-            <span className="mr-1.5 text-[var(--gold)]">{String(i + 1).padStart(2, "0")}</span>
+            <span className="mr-1.5 text-[var(--accent)]">{String(i + 1).padStart(2, "0")}</span>
             {s}
           </motion.span>
         ))}
@@ -737,7 +734,7 @@ export function SlidePipeline() {
         <Card>
           <div className="flex items-center gap-3">
             <IconMark icon={GitBranch} />
-            <p className="text-xs tracking-[0.22em] text-[var(--gold)] uppercase">
+            <p className="text-xs tracking-[0.22em] text-[var(--accent)] uppercase">
               Weekly 30-minute pipeline review
             </p>
           </div>
@@ -831,14 +828,13 @@ export function SlideNinety() {
         <SlideVisual
           src="/presentation/ninety-day-path.png"
           alt="90-day launch path: Build, Qualify, Convert"
-          className="h-[clamp(4.25rem,11vh,6.75rem)]"
         />
         <div className="grid min-h-0 flex-1 items-stretch gap-3 xl:grid-cols-3 xl:gap-4">
           {months.map((month, i) => (
-            <Card key={month.t} tone={i === 2 ? "gold" : i === 1 ? "teal" : "default"}>
+            <Card key={month.t} tone={i === 2 ? "accent" : i === 1 ? "teal" : "default"}>
               <div className="flex items-start justify-between gap-3">
                 <p className="text-xs tracking-[0.22em] uppercase">{month.m}</p>
-                <IconMark icon={month.icon} tone={i === 1 ? "teal" : "gold"} />
+                <IconMark icon={month.icon} tone={i === 1 ? "teal" : "accent"} />
               </div>
               <h3 className="font-display mt-2 text-xl sm:mt-3 sm:text-2xl">{month.t}</h3>
               <BulletList items={month.items} compact />
@@ -877,7 +873,7 @@ export function SlideAgree() {
               variants={staggerItem}
               className="grid gap-1 px-5 py-2.5 md:grid-cols-[200px_1fr] md:items-center md:gap-2 sm:px-6 sm:py-3"
             >
-              <p className="text-[10px] tracking-[0.18em] text-[var(--gold)] uppercase sm:text-xs">{k}</p>
+              <p className="text-[10px] tracking-[0.18em] text-[var(--accent)] uppercase sm:text-xs">{k}</p>
               <p className="text-[0.9rem] sm:text-[0.98rem]">{v}</p>
             </motion.div>
           ))}
@@ -901,13 +897,13 @@ export function SlideClose() {
         Discussion Draft · 15 September 2026
       </p>
       <div>
-        <p className="font-display text-sm tracking-[0.4em] text-[var(--gold)] uppercase">
+        <p className="font-display text-sm tracking-[0.4em] text-[var(--accent)] uppercase">
           The Goal
         </p>
         <h2 className="font-display mt-3 max-w-4xl text-[clamp(1.7rem,4.2vw,3.8rem)] leading-[1.02] font-semibold sm:mt-4">
           Build customer accounts —
           <br />
-          <span className="gold-text">not one-off transactions.</span>
+          <span className="accent-text">not one-off transactions.</span>
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] sm:mt-5 sm:text-lg">
           Osama creates market access. MDBC converts it into solutions, delivery, recurring revenue and long-term customer value.
@@ -917,7 +913,7 @@ export function SlideClose() {
         <SlideVisual
           src="/presentation/account-growth.png"
           alt="Customer account growth: Open, Win, Deliver, Grow"
-          className="h-[clamp(4.5rem,12vh,7.5rem)]"
+          size="lg"
         />
         <div className="grid gap-3 sm:grid-cols-4">
           {steps.map((step, i) => (
@@ -925,7 +921,7 @@ export function SlideClose() {
               <div className="flex justify-center">
                 <IconMark icon={step.icon} />
               </div>
-              <p className="mt-2 text-xs text-[var(--gold)]">0{i + 1}</p>
+              <p className="mt-2 text-xs text-[var(--accent)]">0{i + 1}</p>
               <p className="font-display mt-1 text-base sm:text-lg">{step.t}</p>
             </Card>
           ))}
@@ -954,7 +950,7 @@ export const SLIDES = [
 ];
 
 function Arrow() {
-  return <span className="mx-1 text-[var(--gold)]">→</span>;
+  return <span className="mx-1 text-[var(--accent)]">→</span>;
 }
 
 function Row({ label, note }: { label: string; note: string }) {

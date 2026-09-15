@@ -24,15 +24,15 @@ export function Logo({ size = "header", className = "" }: LogoProps) {
 
   return (
     <span
-      className={`logo-badge inline-flex shrink-0 items-center justify-center overflow-hidden bg-white shadow-[0_10px_32px_rgba(0,0,0,0.32)] ring-1 ring-[rgba(255,255,255,0.2)] ${preset.pad} ${preset.radius} ${className}`}
+      className={`logo-badge inline-flex shrink-0 items-center justify-center overflow-hidden bg-[#eef2f7] shadow-[0_6px_22px_rgba(0,0,0,0.25)] ring-1 ring-white/15 ${preset.pad} ${preset.radius} ${className}`}
       style={{ width: preset.width, height: preset.height }}
     >
       <Image
-        src="/mdbc-logo.jpg"
+        src="/mdbc-logo.png"
         alt="MDBC — Manar Digital Business Company"
         width={800}
         height={800}
-        className="h-full w-full object-contain"
+        className="h-full w-full scale-[1.06] object-contain object-center"
         priority
       />
     </span>
