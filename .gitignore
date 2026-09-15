@@ -23,6 +23,11 @@
 # misc
 .DS_Store
 *.pem
+_pptx_extract/
+_pptx.zip
+
+# temp / extract artifacts
+*.pptx
 
 # debug
 npm-debug.log*
